@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c590b73335d2a3dc0beb71be397fbd2489e335e24c109ee083cb069621a2be18
+-- hash: a47d293b7cf3392fd7b229c7bd8486e38a4a89bf0a1362ef2be09a04088c56d2
 
 name:           haskell-conduit
 version:        0.1.0.0
@@ -27,7 +27,8 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Basic.Conduit
+      Files.Conduit
   other-modules:
       Paths_haskell_conduit
   hs-source-dirs:
@@ -44,6 +45,7 @@ library
     , filepath
     , katip >=0.1.0.0 && <0.8.6.0
     , resourcet
+    , stm-conduit
     , text
   default-language: Haskell2010
 
@@ -67,6 +69,7 @@ executable haskell-conduit-exe
     , haskell-conduit
     , katip >=0.1.0.0 && <0.8.6.0
     , resourcet
+    , stm-conduit
     , text
   default-language: Haskell2010
 
@@ -91,5 +94,6 @@ test-suite haskell-conduit-test
     , haskell-conduit
     , katip >=0.1.0.0 && <0.8.6.0
     , resourcet
+    , stm-conduit
     , text
   default-language: Haskell2010
